@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		373D49D02B2778FC00B9D3BD /* TraficLight_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D49CF2B2778FC00B9D3BD /* TraficLight_SUIApp.swift */; };
-		373D49D22B2778FC00B9D3BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D49D12B2778FC00B9D3BD /* ContentView.swift */; };
+		373D49D22B2778FC00B9D3BD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D49D12B2778FC00B9D3BD /* RootView.swift */; };
 		373D49D42B2778FD00B9D3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373D49D32B2778FD00B9D3BD /* Assets.xcassets */; };
 		373D49D72B2778FD00B9D3BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373D49D62B2778FD00B9D3BD /* Preview Assets.xcassets */; };
+		373D49E32B27799100B9D3BD /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D49E22B27799100B9D3BD /* TrafficLight.swift */; };
+		373D49E62B2779FB00B9D3BD /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D49E52B2779FB00B9D3BD /* RootViewModel.swift */; };
+		378A7C202B2A23E900BB48C1 /* CircleLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A7C1F2B2A23E900BB48C1 /* CircleLight.swift */; };
+		378A7C242B2A2C0000BB48C1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A7C232B2A2C0000BB48C1 /* RoundedButton.swift */; };
+		378A7C292B2A309300BB48C1 /* View + fullWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A7C282B2A309300BB48C1 /* View + fullWidth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373D49CC2B2778FC00B9D3BD /* TraficLight-SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraficLight-SUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373D49CF2B2778FC00B9D3BD /* TraficLight_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraficLight_SUIApp.swift; sourceTree = "<group>"; };
-		373D49D12B2778FC00B9D3BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		373D49D12B2778FC00B9D3BD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		373D49D32B2778FD00B9D3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373D49D62B2778FD00B9D3BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		373D49E22B27799100B9D3BD /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
+		373D49E52B2779FB00B9D3BD /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		378A7C1F2B2A23E900BB48C1 /* CircleLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLight.swift; sourceTree = "<group>"; };
+		378A7C232B2A2C0000BB48C1 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		378A7C282B2A309300BB48C1 /* View + fullWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + fullWidth.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +61,10 @@
 		373D49CE2B2778FC00B9D3BD /* TraficLight-SUI */ = {
 			isa = PBXGroup;
 			children = (
-				373D49CF2B2778FC00B9D3BD /* TraficLight_SUIApp.swift */,
-				373D49D12B2778FC00B9D3BD /* ContentView.swift */,
-				373D49D32B2778FD00B9D3BD /* Assets.xcassets */,
+				373D49DF2B27793200B9D3BD /* Application */,
+				373D49E72B277A0B00B9D3BD /* Domain */,
+				373D49DD2B27791200B9D3BD /* Presentations */,
+				378A7C2A2B2A342200BB48C1 /* Supports */,
 				373D49D52B2778FD00B9D3BD /* Preview Content */,
 			);
 			path = "TraficLight-SUI";
@@ -65,6 +76,90 @@
 				373D49D62B2778FD00B9D3BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		373D49DD2B27791200B9D3BD /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				378A7C1E2B2A23CB00BB48C1 /* Screens */,
+				378A7C1D2B2A23BD00BB48C1 /* Factories */,
+				378A7C262B2A306A00BB48C1 /* Helpers */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		373D49DF2B27793200B9D3BD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				373D49CF2B2778FC00B9D3BD /* TraficLight_SUIApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		373D49E02B27796400B9D3BD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				373D49E22B27799100B9D3BD /* TrafficLight.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		373D49E42B2779EA00B9D3BD /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				373D49D12B2778FC00B9D3BD /* RootView.swift */,
+				373D49E52B2779FB00B9D3BD /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		373D49E72B277A0B00B9D3BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				373D49E02B27796400B9D3BD /* Enums */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		378A7C1D2B2A23BD00BB48C1 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				378A7C1F2B2A23E900BB48C1 /* CircleLight.swift */,
+				378A7C232B2A2C0000BB48C1 /* RoundedButton.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		378A7C1E2B2A23CB00BB48C1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				373D49E42B2779EA00B9D3BD /* Root */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		378A7C252B2A305F00BB48C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				378A7C282B2A309300BB48C1 /* View + fullWidth.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		378A7C262B2A306A00BB48C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				378A7C252B2A305F00BB48C1 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		378A7C2A2B2A342200BB48C1 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				373D49D32B2778FD00B9D3BD /* Assets.xcassets */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373D49D22B2778FC00B9D3BD /* ContentView.swift in Sources */,
+				378A7C202B2A23E900BB48C1 /* CircleLight.swift in Sources */,
+				378A7C242B2A2C0000BB48C1 /* RoundedButton.swift in Sources */,
+				373D49D22B2778FC00B9D3BD /* RootView.swift in Sources */,
 				373D49D02B2778FC00B9D3BD /* TraficLight_SUIApp.swift in Sources */,
+				373D49E62B2779FB00B9D3BD /* RootViewModel.swift in Sources */,
+				373D49E32B27799100B9D3BD /* TrafficLight.swift in Sources */,
+				378A7C292B2A309300BB48C1 /* View + fullWidth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
